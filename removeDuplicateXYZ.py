@@ -7,7 +7,7 @@ Upon restarting a file in CP2K, CP2K will start off with the last saved MD frame
 
 For example, if your restart file is saved every 50 MD frames and your .xyz file appended to every 10 MD frames, if the simulation has stopped or failed at frame 480, it will have only saved
 the restart file at frame 450, but the position at 480. When you restart the file, CP2K will start over from 450 and append the restarted run's coordinates to the main coordinate file,
-but you will still have the first run's MD frames of 450, 460, 470 and 480. This will cause duplicate frames in your trajectory file.
+but you will still have the first run's MD frames of 460, 470 and 480. This will cause duplicate frames in your trajectory file.
 
 The below script removes the older duplicate frames (replaces them with the new ones) by using:
 
